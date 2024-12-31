@@ -1,0 +1,27 @@
+.snow {
+  position: fixed;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  left: var(--left);
+  top: var(--top);
+  opacity: var(--opacity);
+  animation: snowfall var(--duration) linear infinite;
+  animation-delay: var(--delay);
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px);
+  }
+  100% {
+    transform: translateY(110vh) translateX(0);
+  }
+} 
